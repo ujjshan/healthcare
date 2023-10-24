@@ -14,7 +14,7 @@ def index():
     symptom3 = sorted(data['Symptom 3'].unique())
     symptom4 = sorted(data['Symptom 4'].unique())
     symptom5 = sorted(data['Symptom 5'].unique())
-    # symptoms = [sorted(data[f'Symptom {i}'].unique()) for i in range(1, 6)]
+    # symptoms = [sorted(data[f'Symptom {i}'].unique()) for i in range(1, 6)]this can be also used
     
     return render_template('index.html',symptom1=symptom1, symptom2=symptom2,symptom3=symptom3,symptom4=symptom4,symptom5=symptom5)
 
