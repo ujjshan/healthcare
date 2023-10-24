@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/Main Page/calculators/WTH/WTH.css" />
+    <script src="/Main Page/calculators/WTH/WTH.js"></script>
+  </head>
+  <body>
+    <section class="everything"></section>
+    <section id="header">
+      <div class="headlogo">
+        <a href="#"><img src="/img/656_R0lVIEpFTiAzMzMtOTU.jpg" alt="" /></a>
+        <a href="#" id="clothify">Medicure</a>
+      </div>
+      <div>
+        <ul id="navbar">
+          <li class="hover-underline-animation">
+            <a href="/Main Page/Main.html">Home</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <div class="cover">
+        <div class="content">
+          <h4 class="calc">Waist to Height Ratio Calculator</h4>
+          <form>
+            <div class="group">
+              <label>Height:-</label>
+              <input type="number" id="number" placeholder="Centimeters" />
+            </div>
+            <div class="group">
+              <label>Waist Circumference:-</label>
+              <input type="number" id="weight" placeholder="Centimeters" />
+            </div>
+            <div class="flex">
+              <button id="submit" onclick="calc()" class="submit">
+                calculate
+              </button>
+              <div class="group s">
+                <label>Ratio:-</label>
+                <input
+                  type="text"
+                  id="weight1"
+                  placeholder="Your Ratio"
+                  class="bmi"
+                />
+              </div>
+            </div>
+            <div class="output">
+              <h4 class="out" id="output">
+                Ratio <br />
+                Less than 0.4 === Underweight <br />
+                between 0.4 & 0.5 === Healthy <br />
+                More than 0.5 === Possible Health Risk
+              </h4>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="info">
+      <h4>Why is waist-height ratio important?</h4>
+      <p>
+        The waist-to-height ratio is a measure of the distribution of body fat.
+        The higher someone's waist-height ratio is, the higher their risk of
+        obesity-related cardiovascular diseases, as it is a rough estimate of
+        obesity. To explore information about body fat further, visit body fat
+        calculator. <br />
+
+        Studies have found that a person's waist-height ratio is a good
+        indicator of their risk of heart attack, stroke, or death, while its
+        link to diabetes hasn't been proved yet. Other indicators of abdominal
+        obesity are body mass index (BMI) and waist-hip ratio. See our BMI
+        calculator and this waist to hip ratio calculator for more information.
+        <br />
+
+        This review, which covers all cardiometabolic outcomes from studies in
+        fourteen different countries, sets the following cut-off values for
+        WtHR: <br />
+      </p>
+      <h4>How to measure your waist?</h4>
+      <p>
+        According to the WHO's data gathering protocol, the waist circumference
+        should be measured at the midpoint between the last palpable rib and the
+        top of the iliac crest, using a stretch‐resistant tape measure.
+        <br />
+
+        Practically, the measurements are usually taken at the smallest
+        circumference of the natural waist, usually just above the belly
+        button.tom-most field.
+      </p>
+      <h4>What does waist to height ratio calculator do?</h4>
+      <p>
+        he waist-height ratio is calculated as waist measurement divided by
+        height measurement, W ÷ H, in centimeters. For example, a person with a
+        28 in (71 cm) waist and 5 ft 6 in (170 cm) height has a waist–height
+        ratio of 0.42.
+      </p>
+    </section>
+    <script>
+      let x = 0;
+      function calc() {
+        event.preventDefault();
+        const height = document.getElementById("number").value;
+        const weight = document.getElementById("weight").value;
+        console.log(height / weight);
+
+        x += document.getElementById("weight1").value = (
+          Math.round((weight / height) * 100) / 100
+        ).toFixed(2);
+      }
+      // const element = document.getElementById("output");
+      // console.log(x);
+      // if (x > 4 && x < 5) {
+      //   element.innerHTML = "healthy";
+      // } else if (x > 4) {
+      //   document.getElementById("output").value = Underwight;
+      // }
+    </script>
+  </body>
+</html>

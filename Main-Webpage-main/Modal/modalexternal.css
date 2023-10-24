@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+@font-face {
+  font-family: logo;
+  src: url(img/fonts/Unique.ttf);
+}
+@font-face {
+  font-family: adidas;
+  src: url(/Fonts/ITCAvantGardeStd-XLtObl.otf);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  background: url(../Modal/online-marketing-hIgeoQjS_iE-unsplash.jpg) no-repeat
+    center center/cover;
+  scroll-behavior: smooth;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(255, 255, 231, 0.322);
+  /* background-color: rgba(0, 0, 0, 0); */
+}
+
+/* Global Styles */
+
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: #222;
+}
+
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: #222;
+}
+h3 {
+  font-size: 33px;
+  line-height: 54px;
+  color: #222;
+}
+
+h4 {
+  font-size: 20px;
+  color: #222;
+}
+.remove {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+
+h6 {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+p {
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+
+body {
+  width: 100%;
+}
+.modal {
+  position: fixed;
+  z-index: 999;
+}
+.modal_container {
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: fixed;
+  align-items: center;
+}
+.modal_flex {
+  /* background-color: #465b52; */
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 10%;
+}
+.modal_flex i {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.user {
+  padding: 30px 42px 30px 44px;
+  margin: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.377);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.user:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  background-color: rgba(250, 235, 215, 0.719);
+}
+.client {
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.377);
+  padding: 30px;
+  margin: 30px;
+  border-radius: 20px;
+  transition: all 0.5s;
+}
+.client:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  background-color: rgba(250, 235, 215, 0.719);
+}
+.modal_cont {
+  background-color: rgba(255, 255, 255, 0.397);
+  border: 1px solid rgba(0, 0, 0, 0.356);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.308);
+  height: 40vh;
+  width: 50%;
+  border-radius: 30px;
+  position: relative;
+  left: 25%;
+  transform: translateX(-25%);
+  top: 50%;
+  transform: translateY(-50%);
+}
+.hidden {
+  transition: 0.5s;
+  display: none;
+}
+.modal_flex a {
+  text-decoration: none;
+  list-style: none;
+  color: black;
+}

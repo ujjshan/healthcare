@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="//Main Page/calculators/calorie/calorie.css" />
+    <script src="...//Main Page/calculators/calorie/calorie.js"></script>
+  </head>
+  <body>
+    <section class="everything"></section>
+    <section id="header">
+      <div class="headlogo">
+        <a href="#"><img src="/img/656_R0lVIEpFTiAzMzMtOTU.jpg" alt="" /></a>
+        <a href="#" id="clothify">Medicure</a>
+      </div>
+      <div>
+        <ul id="navbar">
+          <li class="hover-underline-animation">
+            <a href="/Main Page/Main.html">Home</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <div class="cover">
+        <div class="content">
+          <h4 class="calc">Calories Calculator</h4>
+          <form>
+            <div class="group">
+              <label>Sex:-</label>
+              <input id="male" type="radio" name="gender" />Male
+              <input id="female" type="radio" name="gender" />Female
+            </div>
+            <div class="group">
+              <label>Height:-</label>
+              <input id="height" class="height" type="number" placeholder="Centimeters" />
+            </div>
+            <div class="group">
+              <label>Weight:-</label>
+              <input class="weight" type="number" id="weight" placeholder="Kg" />
+            </div>
+            <div class="group">
+              <label>Age:-</label>
+              <input
+                type="number"
+                id="age"
+                placeholder="Your Age"
+                class="age"
+              />
+              <div class="group">
+                <label>Activity Level:-</label>
+                <input
+                  type="number"
+                  id="activityLevel"
+                  placeholder="Your Activity Level"
+                  class="activityLevel"
+                />
+            </div>
+          </form>
+        </div >
+        <button class="submit btnn okk" onclick="displayCalories()">Calculate</button>
+        <div class="group result"></div>
+      </div>
+    </section>
+    <section class="info">
+      <h4>How many calories should I eat a day?</h4>
+      <p>
+        The recommended calorie intake, or TDEE (Total Daily Energy Expenditure), depends on many factors. They are quite easy to measure, and you (hopefully) already know some: your age, height, weight, and sex. There are others, like the level of your physical activity, which are more qualitative than quantitative, but it's still possible to measure and classify them. Other ones, like your metabolism or overall health, are very difficult to estimate. That's why, even though our calorie calculator takes into account most factors that influence the number of calories you need every day, it may not give results that are 100% accurate. Consider it more of a guideline than a rigorous directive. <br> <br>
+
+For example, a 40-year-old man who has a physical job (equivalent to exercising six days a week) and has the average American height (5 ft 9 in) and weight (194.7 lbs) should ingest 3567 calories a day. On the other hand, his daughter, an average 18-year-old girl (5 ft 4 in, 117 lbs) who exercises once a week only, needs only 1814 calories a day – over a thousand calories less than her father. <br>
+      </p>
+      <h4>What are calories, exactly?</h4>
+      <p>
+        Calories are measures of energy. 1 calorie is equivalent to about 4.18 joules. <br> <br>
+
+In nutrition, we actually deal with kilocalories (kcal), where 1 kcal is equal to a thousand of the "small" calories. As you could expect, 1 kcal = 4.18 kJ. (This article uses the term "calories" to describe kilocalories, like probably every other healthy diet article on the Internet).
+      <h4>How our food calorie calculator works</h4>
+      <p>
+        The calorie calculator is based on the Mifflin-St Jeor equation. It allows you to find your basal metabolic rate (BMR) – the amount of energy needed for your body to support only its basic vital functions. It differs for men and women: <br> <br>
+
+BMR(men) = (10 × weight / 1kg + 6.25 × height / 1cm - 5 × age / 1 year + 5) kcal / day <br>
+
+BMR(women) = (10 × weight / 1kg + 6.25 × height / 1cm - 5 × age / 1 year - 161) kcal / day
+      </p>
+    </section>
+    <script src="calorie.js"></script>
+  </body>
+</html>

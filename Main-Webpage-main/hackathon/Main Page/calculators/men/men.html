@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/Main Page/calculators/men/men.css" />
+    <script src="/Main Page/calculators/men/men.js"></script>
+  </head>
+  <body>
+    <section class="everything"></section>
+    <section id="header">
+      <div class="headlogo">
+        <a href="#"><img src="/img/656_R0lVIEpFTiAzMzMtOTU.jpg" alt="" /></a>
+        <a href="#" id="clothify">Medicure</a>
+      </div>
+      <div>
+        <ul id="navbar">
+          <li class="hover-underline-animation">
+            <a href="/Main Page/Main.html">Home</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <div class="cover">
+        <div class="content">
+          <h4 class="calc">BMI (Adult) Calculator</h4>
+          <form>
+            <!-- <div class="group">
+              <label>Sex:-</label>
+              <input type="radio" name="gender" />Male
+              <input type="radio" name="gender" />Female
+            </div> -->
+            <div class="group">
+              <label>Height:-</label>
+              <input
+                class="height"
+                type="number"
+                id="number"
+                placeholder="Centimeters"
+                min="1"
+                max="300"
+              />
+            </div>
+            <div class="group">
+              <label>Actual Body Weight:-</label>
+              <input
+                type="number"
+                id="weight"
+                placeholder="Kg"
+                min="1"
+                max="700"
+              />
+            </div>
+            <div class="flex">
+              <div class="btn">
+                <button onclick="calc()" class="btnn">Continue</button>
+              </div>
+              <div class="group">
+                <label>BMI:-</label>
+                <input
+                  type="text"
+                  id="out"
+                  placeholder="Your BMI"
+                  class="bmi"
+                  disabled
+                />
+              </div>
+            </div>
+            <div class="output">
+              <h4 class="out" id="output">
+                <br />
+                Underweight = less than 18.5 <br />
+                Normal weight = 18.5 - 24.9 <br />
+                Overweight = 25 - 29.9 <br />
+                Obesity = 30 - 35 <br />
+                Severe obesity = 35 and over
+              </h4>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="info">
+      <h4>How do I calculate BMI?</h4>
+      <p>
+        To compute BMI, you need to: <br />
+        <br />
+
+        Divide your weight (in kilograms) by your height (in meters). <br />
+
+        Divide the answer by your height again to get your BMI. <br />
+        That is, the body mass index formula. Expressed differently, it is: BMI
+        = weight / height². <br />
+      </p>
+      <h4>Using our body mass index calculator</h4>
+      <p>
+        At the top of our BMI calculator are fields for you to plug in your
+        height and weight. Plug in these values, and you'll instantly have your
+        BMI, your BMI Prime (see above) and a little message telling you what
+        range you fall into. <br />
+
+        If you're overweight and want to know exactly how much you'll have to
+        lose to get into the healthy range, you can do that too. Leave your
+        height and weight in the boxes where they are, and type "0.9" into the
+        BMI Prime box. Your weight and BMI will adjust themselves. <br />
+
+        Tip: If your height box adjusts itself when you change other boxes,
+        you'll need to lock it. Click the right hand panel of the box and select
+        the lock icon to hold that figure in place while you play with the
+        values in other boxes. That is... unless you plan on growing taller!
+        <br />
+      </p>
+      <h4>Does normal BMI depend on age?</h4>
+      <p>
+        No for adults, the range of normal BMI is 18.5 - 24.9, and it does not
+        depend on a person's age. For children, however, age is essential in
+        assessing their weight.
+      </p>
+    </section>
+    <script>
+      function calc() {
+        event.preventDefault();
+
+        const h = document.getElementById("number").value;
+        const w = document.getElementById("weight").value;
+        if (h > 0 && w > 0) {
+          if (h < 301 && w < 701) {
+            document.getElementById("out").value = (
+              (w / (h * h)) *
+              10000
+            ).toFixed(2);
+          } else {
+            alert(
+              "Wrong Input \n Height should be between --> 1 to 300 cms \n Weight should be between--> 1 to 700kgs"
+            );
+          }
+        } else {
+          alert(
+            "Wrong Input \n Height should be between --> 1 to 300 cms \n Weight should be between--> 1 to 700kgs"
+          );
+        }
+      }
+    </script>
+  </body>
+</html>

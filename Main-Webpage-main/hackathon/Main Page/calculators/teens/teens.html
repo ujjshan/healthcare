@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/Main Page/calculators/teens/teens.css" />
+    <script src="/Main Page/calculators/teens/teens.js"></script>
+  </head>
+  <body>
+    <section class="everything"></section>
+    <section id="header">
+      <div class="headlogo">
+        <a href="#"><img src="/img/656_R0lVIEpFTiAzMzMtOTU.jpg" alt="" /></a>
+        <a href="#" id="clothify">Medicure</a>
+      </div>
+      <div>
+        <ul id="navbar">
+          <li class="hover-underline-animation">
+            <a href="/Main Page/Main.html">Home</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <div class="cover">
+        <div class="content">
+          <h4 class="calc">BMI(Teens) Calculator</h4>
+          <form>
+            <div class="group">
+              <label>Height:-</label>
+              <input
+                type="number"
+                id="height"
+                placeholder="Centimeters"
+                min="1"
+                max="300"
+              />
+            </div>
+            <div class="group">
+              <label>Actual Body Weight:-</label>
+              <input
+                type="number"
+                id="weight"
+                placeholder="Kg"
+                min="1"
+                max="700"
+              />
+            </div>
+            <div class="flex">
+              <div class="btn">
+                <button onclick="calc()" class="btnn">Continue</button>
+              </div>
+              <div class="group">
+                <label>BMI Prime:-</label>
+                <input
+                  type="text"
+                  id="BMI"
+                  placeholder="Your BMI"
+                  class="bmi"
+                  disabled
+                />
+              </div>
+            </div>
+            <div class="output">
+              <h4 class="out" id="output">
+                Less than 0.4 === Underweight <br />
+                between 0.4 & 0.5 === Healthy <br />
+                More than 0.5 === Possible Health Risk
+              </h4>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="info">
+      <h4>Why a BMI calculator for teens</h4>
+      <p>
+        In fact, we at Omni have created a total of 5 BMI calculators that
+        include a general BMI calculator (jack of all trades, master of none) as
+        well as specific BMI calculators for men, women, kids, and teens. Feel
+        free to use the one that best suits your needs by following the links
+        below: <br />
+        <br />
+
+        General BMI calculator <br />
+        <br />
+        BMI calculator for men <br /><br />
+        BMI calculator for women and BMI calculator for kids (boys and girls up
+        to 10 years old).
+      </p>
+      <h4>BMI, statistics and percentiles</h4>
+      <p>
+        It is useless to talk about BMI without a point of reference or
+        comparison. In fact, BMI was always designed to be a statistical
+        comparison tool to assess the state of a person's body. We have talked
+        in great detail about the flaws of a statistical tool for assessing the
+        health of one individual in the general BMI calculator, but as long as
+        we set some constraints, BMI can still be useful. <br />
+        <br />
+
+        The first thing to know is that BMI is meant as a measurement for
+        sedentary people. This means that athletes and very active people might
+        have "unhealthy" BMI values despite being totally healthy. The second
+        thing to note is that BMI doesn't consider body types and body shapes,
+        so if you have an uncommon or extreme body type, your BMI might not be a
+        good indicator of your health.
+      </p>
+      <h4>BMI chart for teens and its relevance</h4>
+      <p>
+        When it comes to determining what a healthy BMI for teens is, BMI charts
+        rule, quite literally. What we mean by that is that BMI charts for teens
+        are actually the medical way to determine whether a teenager has a
+        healthy body mass index or if they are at risk. These charts (shown
+        below) are different for boys and girls and present a visualization of
+        the percentiles we mentioned in the previous section.
+      </p>
+    </section>
+    <script>
+      function calc() {
+        event.preventDefault();
+        const h = document.getElementById("height").value;
+        const w = document.getElementById("weight").value;
+        if (h > 0 && w > 0) {
+          if (h < 301 && w < 701) {
+            document.getElementById("BMI").value = (
+              ((w / (h * h)) * 25 * 1000) /
+              100
+            ).toFixed(2);
+          } else {
+            alert(
+              "Wrong Input \n Height should be between --> 1 to 300 cms \n Weight should be between--> 1 to 700kgs"
+            );
+          }
+        } else {
+          alert(
+            "Wrong Input \n Height should be between --> 1 to 300 cms \n Weight should be between--> 1 to 700kgs"
+          );
+        }
+      }
+    </script>
+  </body>
+</html>

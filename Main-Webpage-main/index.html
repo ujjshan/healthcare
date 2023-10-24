@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Healthcare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="healthcare.css" />
+  </head>
+  <body>
+    <section class="box">
+      <div class="image"></div>
+      <section class="login">
+        <div class="content">
+          <div class="align">
+            <div class="logo">
+              <img src="img/656_R0lVIEpFTiAzMzMtOTU.jpg" alt="" />
+            </div>
+            <div class="text">
+              <h5>Medicure</h5>
+              <h3 class="sty">Welcome</h3>
+              <h6 class="sty">Please Enter Your Details</h6>
+              <form onsubmit="myfunc(event)">
+                <div class="enter">
+                  <input
+                    class=""
+                    type="text"
+                    id="fname"
+                    placeholder="Enter your full name"
+                  />
+                </div>
+                <div class="ente">
+                  <!-- <a href="/Main Page/Main.html"></a> -->
+                  <input
+                    class="cont"
+                    type="submit"
+                    value="Continue"
+                    onclick="nextpage()"
+                  />
+                </div>
+              </form>
+              <h6 class="sty2 or">OR</h6>
+              <div class="buttons">
+                <div class="google">
+                  <button>
+                    <span
+                      ><img
+                        src="img/colorful-google-logo-transparent-clipart-download-u3DWLj.png"
+                        alt="" /></span
+                    >Continue With Google
+                  </button>
+                </div>
+                <div class="facebook">
+                  <button>
+                    <span
+                      ><img
+                        class="fb"
+                        src="img/facebook-logo-png-38360.png"
+                        alt="" /></span
+                    >Continue With Facebook
+                  </button>
+                </div>
+                <div class="apple">
+                  <button>
+                    <span
+                      ><img src="img/apple-logo-icon-14895.png" alt="" /></span
+                    >Continue With Apple
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <script type="text/javascript">
+      const error = document.getElementById("fname");
+      let name = [];
+      function myfunc(event) {
+        event.preventDefault();
+        const full_name = document.getElementById("fname").value;
+        name.push(full_name);
+        localStorage.setItem("Full_Name", full_name);
+        if (full_name.length === 0) {
+          alert("Enter Your Name");
+          error.classList.add("error");
+        }
+        // console.log(localStorage.value(0));
+      }
+
+      console.log(name);
+      function nextpage() {
+        if (name.length != 0) {
+          // document.location.href = "Main Page/Main.html";
+          document.location.href = "Modal/modalexternal.html";
+        } else {
+          name = [];
+        }
+      }
+    </script>
+  </body>
+</html>

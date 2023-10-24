@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/Main Page/calculators/kids/kids.css" />
+    <script src="/Main Page/calculators/kids/kids.js"></script>
+  </head>
+  <body>
+    <section class="everything"></section>
+    <section id="header">
+      <div class="headlogo">
+        <a href="#"><img src="/img/656_R0lVIEpFTiAzMzMtOTU.jpg" alt="" /></a>
+        <a href="#" id="clothify">Medicure</a>
+      </div>
+      <div>
+        <ul id="navbar">
+          <li class="hover-underline-animation">
+            <a href="/Main Page/Main.html">Home</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <div class="cover">
+        <div class="content">
+          <h4 class="calc">BMI (Kids) Calculator</h4>
+          <form>
+            <div class="group">
+              <label>Height:-</label>
+              <input
+                type="number"
+                id="height"
+                placeholder="Meters"
+                min="1"
+                max="3.1"
+              />
+            </div>
+            <div class="group">
+              <label>Actual Body Weight:-</label>
+              <input
+                type="number"
+                id="weight"
+                placeholder="Kg"
+                min="1"
+                max="700"
+              />
+            </div>
+            <div class="flex">
+              <div class="btn">
+                <button onclick="calc()" class="btnn">Continue</button>
+              </div>
+              <div class="group">
+                <label>BMI:-</label>
+                <input
+                  type="text"
+                  id="BMI"
+                  placeholder="Your BMI"
+                  class="bmi"
+                  disabled
+                />
+              </div>
+            </div>
+            <div class="output">
+              <h4 class="out" id="output">
+                Underweight = less than 9.25 <br />
+                Normal weight = 9.25 - 12.45 <br />
+                Overweight = 12.50 - 14.9 <br />
+                Obesity = 15.0 - 17.5 <br />
+                Severe obesity = 17.6 and over
+              </h4>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="info">
+      <h4>Why BMI for kids?</h4>
+      <p>
+        We often say that kids are just tiny people, and in many ways, they are.
+        But in terms of physical development, they are still in the making,
+        which means that a lot of the rules and risks that apply to adults don't
+        apply to kids. The same is true for the BMI of kids. When we are talking
+        about the BMI for boys or the BMI for girls, many factors make it
+        virtually impossible to compare them sensibly to an adult.
+        <br />
+
+        At Healthify, we took this into account, and we have separated our BMI
+        calculators into 5 groups. These include a general BMI calculator and
+        other calculators specific for each of the most easily divisible
+        population groups: women, men, teens, and children. If you are looking
+        for one of our other calculators, here are links to all of them:
+        <br />
+
+        General BMI calculator<br />
+        <br />
+        BMI calculator for Adults <br />
+
+        <br />
+        and BMI calculator for teenagers. <br />
+        <br />
+      </p>
+      <h4>BMI chart for kids and the healthy BMI for kids</h4>
+      <p>
+        In some of our other BMI calculators, we mention the statistical nature
+        of BMI and its inherent problem when using it as a diagnostic tool. For
+        kids, however, this problem is exacerbated. When looking at BMI for boys
+        or BMI for girls, doctors always use a percentile BMI chart for children
+        so they know how beneficial the results are. We will explain later what
+        percentiles are, but for now, know that it's a tool used to compare an
+        individual with the rest of the population.
+      </p>
+      <h4>How to use the BMI calculator for kids</h4>
+      <p>
+        Calculating the BMI for children by hand is not very difficult, but we
+        have made it even simpler with our BMI calculator for girls and boys.
+        Using our calculator will save time and avoid mistakes when comparing
+        the obtained values with the BMI charts for kids. <br />
+
+        Here are the steps for using the BMI calculator for kids effectively:
+        <br />
+
+        Input the kid's height (the units don't matter because the calculator
+        will convert them to the right ones for the equation). <br />
+        <br />
+        Input the kid's weight (choose the units you love the most). <br />
+        <br />
+        The values for BMI prime and BMI for girls and boys will be computed
+        immediately. <br />
+        <br />
+        Input how old the child is in years. <br />
+        <br />
+        Input the sex of the child to obtain the right percentiles. <br />
+        <br />
+        The percentiles and categorization according to the BMI for kids will be
+        displayed as text. <br />
+        <br />
+      </p>
+    </section>
+    <script>
+      function calc() {
+        event.preventDefault();
+        const h = document.getElementById("height").value;
+        const w = document.getElementById("weight").value;
+        if (h > 0 && w > 0) {
+          if (h < 3.1 && w < 701) {
+            document.getElementById("BMI").value = (
+              ((((w / (h * h)) * 100) / 100) * 1) /
+              2
+            ).toFixed(1);
+          } else {
+            alert(
+              "Wrong Input \n Height should be between --> 1 to 3 meters \n Weight should be between--> 1 to 700kgs"
+            );
+          }
+        } else {
+          alert(
+            "Wrong Input \n Height should be between --> 1 to 3 meters \n Weight should be between--> 1 to 700kgs"
+          );
+        }
+      }
+    </script>
+  </body>
+</html>

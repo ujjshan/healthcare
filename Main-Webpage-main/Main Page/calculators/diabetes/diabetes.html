@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="/Main Page/calculators/diabetes/diabetes.css"
+    />
+    <script src="/Main Page/calculators/diabetes/diabetes.js"></script>
+  </head>
+  <body>
+    <section class="everything"></section>
+    <section id="header">
+      <div class="headlogo">
+        <a href="#"><img src="/img/656_R0lVIEpFTiAzMzMtOTU.jpg" alt="" /></a>
+        <a href="#" id="clothify">Medicure</a>
+      </div>
+      <div>
+        <ul id="navbar">
+          <li class="hover-underline-animation">
+            <a href="/Main Page/Main.html">Home</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <div class="cover">
+        <div class="content">
+          <h4 class="calc">Diabetes Calculator</h4>
+          <form>
+            <div class="group">
+              <label>Sex:-</label>
+              <input id="male" type="radio" name="gender" />Male
+              <input id="female" type="radio" name="gender" />Female
+            </div>
+            <div class="group">
+              <label>Height:-</label>
+              <input type="number" id="height" placeholder="Centimeters" />
+            </div>
+            <div class="group">
+              <label>Actual Body Weight:-</label>
+              <input type="number" id="weight" placeholder="Kg" />
+            </div>
+            <div class="group">
+              <label>Age:-</label>
+              <input
+                type="number"
+                id="age"
+                placeholder="Your Age"
+                class="age"
+              />
+            </div>
+            <div class="group">
+              <label>Family History:-</label>
+              <input
+                type="number"
+                id="FamilyHistory"
+                class="FamilyHistory"
+                placeholder="1 for Yes, 0 for No"
+              />
+            </div>
+            <div class="group all">
+              <label>Ethnicity:-</label>
+              <input
+                type="number"
+                id="Ethnicity"
+                class="Ethnicity"
+                placeholder="1 for Latin American, 0 for Non-hispanic White"
+              />
+            </div>
+            <div class="group">
+              <label>Fasting Glucose:-</label>
+              <input
+                type="number"
+                id="fastingGlucose"
+                class="fastingGlucose"
+                placeholder="mg/dL"
+              />
+            </div>
+            <div class="group">
+              <label>Systolic Blood Pressure:-</label>
+              <input id="SBP" class="SBP" placeholder="mmHg" type="number" />
+            </div>
+            <div class="group">
+              <label>HDL Cholesterol:-</label>
+              <input id="HDL" class="HDL" placeholder="mg/dL" type="number" />
+            </div>
+          </form>
+        </div>
+        <button class="submit design_btn" onclick="displayResult()">
+          Calculate
+        </button>
+        <div class="group result"></div>
+      </div>
+    </section>
+    <section class="info">
+      <h4>About the diabetes risk calculator</h4>
+      <p>
+        Our Diabetes Risk Calculator is based on the article Identification of
+        Persons at High Risk for Type 2 Diabetes Mellitus: Do We Need the Oral
+        Glucose Tolerance Test? published in 2002 in the medical journal Annals
+        of Internal Medicine by Dr. Stern and his colleagues at the University
+        of Texas. In their publication, they proposed a prediction tool which
+        could predict the incidence of diabetes within 7.5 years with a high
+        degree of accuracy. This observational study was performed on almost
+        3000 adults. The conclusion that the team reached was that the risk of
+        developing diabetes is mostly associated with a patient's: <br /><br />
+
+        Age <br />
+        Sex <br />
+        BMI <br />
+        Ethnicity <br />
+        Family history of diabetes <br />
+        Fasting glucose <br />
+        <br />
+        Systolic Blood Pressure <br />
+        and HDL cholesterol <br />
+      </p>
+      <h4>How to use the adjusted body weight calculator?</h4>
+      <p>
+        if you are interested in learning the probability that you will contract
+        diabetes, use our diabetes risk calculator. All you need to do is have
+        some recent basic laboratory tests results (fasting glucose and HDL
+        cholesterol) ready, check your blood pressure, and you can start using
+        our diabetes calculator. Simply input the necessary information in the
+        appropriate boxes: your age, sex, weight, height, the results of your
+        laboratory results- HDL and fasting glucose, your average systolic blood
+        pressure, as well as some information about your ethnic origin and
+        family history, and that's it! You will receive your result - that is
+        your risk of developing diabetes in the next 7.5 years.
+      </p>
+    </section>
+    <script src="diabetes.js"></script>
+  </body>
+</html>

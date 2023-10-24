@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+@font-face {
+  font-family: logo;
+  src: url(img/fonts/Unique.ttf);
+}
+@font-face {
+  font-family: adidas;
+  src: url(ITCAvantGardeStd-Bold.otf);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.829);
+}
+
+/* Global Styles */
+
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: #222;
+}
+
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: #222;
+}
+h3 {
+  font-size: 39px;
+  line-height: 54px;
+  color: #222;
+}
+
+h4 {
+  font-size: 20px;
+  color: #222;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+p {
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+
+body {
+  width: 100%;
+  /* background-image: url(/img/tengyart-_oacW46eXNM-unsplash.jpg) no-repeat center
+    center/cover; */
+}
+/* ----------------------------------------------NAV---------------------------------------------------------- */
+
+.nav h4 {
+  color: white;
+  font-family: "Work Sans", sans-serif;
+}
+.box {
+  position: absolute;
+  width: 100%;
+  min-width: 640px;
+
+  height: 100%;
+}
+.image {
+  background: url(img/tengyart-_oacW46eXNM-unsplash.jpg) no-repeat center
+    center/cover;
+  width: 60%;
+  min-width: 640px;
+  height: 100vh;
+  position: absolute;
+  /* left: 50%; */
+  left: 40%;
+  border-radius: 50px 0px 0px 50px;
+}
+.content {
+}
+.align {
+  padding: 110px 0px 0px 0px;
+}
+.login {
+  width: 40%;
+  height: 100vh;
+}
+.logo img {
+  height: 10vh;
+  width: 10vh;
+}
+.logo {
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+}
+.text {
+  text-align: center;
+}
+.sty {
+  font-family: "Work Sans", sans-serif;
+}
+.sty2 {
+  font-family: "Work Sans", sans-serif;
+  opacity: 0.7;
+}
+button {
+  padding: 0em 0em;
+}
+.google img,
+span {
+  vertical-align: -23%;
+  height: 25px;
+  width: 25px;
+}
+.facebook img,
+span {
+  vertical-align: -2%;
+  height: 22px;
+  width: 22px;
+}
+.apple img,
+span {
+  vertical-align: -23%;
+  height: 25px;
+  width: 25px;
+  transform: scale(1.5);
+}
+span {
+  transform: translateY(2px);
+}
+form div input {
+  /* padding: 2% 10% 2% 10%; */
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.267);
+  padding: 10px 170px 10px 10px;
+
+  text-align: left;
+}
+.cont {
+  padding: 10px 132px 10px 140px;
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.308);
+  background-color: #222;
+  color: white;
+  /* font-size: 70%; */
+}
+.enter input {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  opacity: 80%;
+  margin: 10px 0px 10px 0px;
+}
+.ente input {
+  cursor: pointer;
+  margin: 0px 0px 0px 0px;
+}
+.google button {
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.137);
+  padding: 5px 35px 5px 36px;
+  margin: 10px 0px 0px 0px;
+  transition: all 0.3s;
+  transition-timing-function: ease-in-out;
+}
+.google button:hover {
+  background-color: rgba(34, 34, 34, 0.692);
+  color: white;
+}
+.facebook button {
+  cursor: pointer;
+  padding: 5px 30px 5px 30px;
+  margin: 10px 0px 0px 0px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.137);
+  transition: all 0.3s;
+  transition-timing-function: ease-in-out;
+}
+.facebook button:hover {
+  background-color: rgba(34, 34, 34, 0.692);
+  color: white;
+}
+.apple button {
+  cursor: pointer;
+  padding: 5px 42px 5px 41px;
+  margin: 10px 0px 0px 0px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.137);
+  transition: all 0.3s;
+  transition-timing-function: ease-in-out;
+}
+.apple button:hover {
+  background-color: rgba(34, 34, 34, 0.692);
+  color: white;
+}
+
+.google button span img {
+  position: relative;
+
+  left: -5%;
+}
+.facebook button span img {
+  position: relative;
+
+  left: -5%;
+}
+.apple button span img {
+  position: relative;
+
+  left: -5%;
+}
+.or {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  cursor: context-menu;
+}
+.buttons {
+}
+.error {
+  border: 1px solid red;
+}
+.error::placeholder {
+  color: red;
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/Main Page/calculators/WTHip/WTHip.css" />
+    <script src="/Main Page/calculators/WTH/WTH.js"></script>
+  </head>
+  <body>
+    <section class="everything"></section>
+    <section id="header">
+      <div class="headlogo">
+        <a href="#"><img src="/img/656_R0lVIEpFTiAzMzMtOTU.jpg" alt="" /></a>
+        <a href="#" id="clothify">Medicure</a>
+      </div>
+      <div>
+        <ul id="navbar">
+          <li class="hover-underline-animation">
+            <a href="/Main Page/Main.html">Home</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <div class="cover">
+        <div class="content">
+          <h4 class="calc">Waist to Hip Ratio Calculator</h4>
+          <form>
+            <div class="group">
+              <label>Waist Circumference:-</label>
+              <input type="number" id="number" placeholder="Centimeters" />
+            </div>
+            <div class="group">
+              <label>Hip Circumference:-</label>
+              <input type="number" id="weight" placeholder="Centimeters" />
+            </div>
+            <div class="flex">
+              <button id="submit" onclick="calc()" class="submit">
+                calculate
+              </button>
+              <div class="group s">
+                <label>Ratio:-</label>
+                <input
+                  type="text"
+                  id="weight1"
+                  placeholder="Your Ratio"
+                  class="bmi"
+                />
+              </div>
+            </div>
+            <div class="output">
+              <h4 class="out" id="output">
+                Ratio <br />
+                Upto 0.95 === Low Health Risk <br />
+                Upto 0.96 to 1.0 === Morderate Health Risk<br />
+                Upto 1.0 or more=== Possible Health Risk
+              </h4>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="info">
+      <h4>Why is waist-hip ratio important?</h4>
+      <p>
+        The waist-hip ratio is generally an indicator or measure of health and
+        the risk of developing serious health conditions, such as diabetes,
+        asthma, or Alzheimer's disease. Research shows that people with
+        "apple-shaped" bodies (with more weight around the waist) face more
+        health risks than those with "pear-shaped" bodies who carry more weight
+        around the hips. Check your body shape with our body shape calculator.
+        <br />
+
+        Waist-hip ratio is used as a measurement of obesity. The WHO states that
+        abdominal obesity is defined as a waist-hip ratio above 0.90 for males
+        and above 0.85 for females or a body mass index (BMI) above 30. Visit
+        our BMI calculator to learn more.
+      </p>
+      <h4>How should I measure waist and hips?</h4>
+      <p>
+        It's more complicated than you might think: <br />
+        <br />
+        According to the WHO's data gathering protocol, we should use a
+        stretch-resistant tape to measure the waist circumference at the
+        midpoint between the last palpable rib and the top of the iliac crest.
+        Hip circumference should be measured around the widest portion of the
+        buttocks, with the tape parallel to the floor. <br />
+        Practically, the measurements are usually taken at the smallest
+        circumference of the natural waist, usually just above the belly button
+        and the widest part of the buttocks or hip.
+      </p>
+      <h4>How do I calculate the waist to hip ratio?</h4>
+      <p>
+        Do you wish to learn more about calculating the waist-to-hip ratio by
+        hand? To calculate the waist-to-hip ratio, we use the following formula:
+        Ratio = W ÷ H.
+        <br />
+        <br />
+
+        In this formula, W refers to the circumference of the waist and H
+        represents the circumference of the hip.
+        <br />
+
+        For example, a person with a 28 in (71 cm) waist and 35 in (89 cm) hips
+        has a waist-hip ratio of 28/35 = 0.8 in
+        <br />
+      </p>
+    </section>
+    <script>
+      function calc() {
+        event.preventDefault();
+        const height = document.getElementById("number").value;
+        const weight = document.getElementById("weight").value;
+        console.log(height / weight);
+
+        document.getElementById("weight1").value = (
+          Math.round((weight / height))
+        ;
+      }
+      // const element = document.getElementById("output");
+      // console.log(x);
+      // if (x > 4 && x < 5) {
+      //   element.innerHTML = "healthy";
+      // } else if (x > 4) {
+      //   document.getElementById("output").value = Underwight;
+      // }
+    </script>
+  </body>
+</html>

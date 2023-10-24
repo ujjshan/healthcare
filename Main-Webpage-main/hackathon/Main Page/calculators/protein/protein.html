@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/Main Page/calculators/protein/protein.css" />
+    <script src="/Main Page/calculators/protein/protein.js"></script>
+  </head>
+  <body>
+    <section class="everything"></section>
+    <section id="header">
+      <div class="headlogo">
+        <a href="#"><img src="/img/656_R0lVIEpFTiAzMzMtOTU.jpg" alt="" /></a>
+        <a href="#" id="clothify">Medicure</a>
+      </div>
+      <div>
+        <ul id="navbar">
+          <li class="hover-underline-animation">
+            <a href="/Main Page/Main.html">Home</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <div class="cover">
+        <div class="content">
+          <h4 class="calc">Protein Calculator</h4>
+          <form>
+            <div class="group">
+              <label>Sex:-</label>
+              <input type="radio" name="gender" />Male
+              <input type="radio" name="gender" />Female
+            </div>
+            <div class="group">
+              <label>Height:-</label>
+              <input type="number" id="height" class="height" placeholder="Centimeters" />
+            </div>
+            <div class="group">
+              <label>Weight:-</label>
+              <input type="number" id="weight" class="weight" placeholder="Kg" />
+            </div>
+            <div class="group">
+              <label>Age:-</label>
+              <input
+                type="number"
+                id="age"
+                placeholder="Your Age"
+                class="age"
+              />
+            <div class="group all">
+              <label>Acitivity Level:-</label>
+              <input
+                type="number"
+                id="activityLevel"
+                placeholder="0 for sedentary, 1 for active"
+                class="activityLevel "
+              />
+            </div>
+          </form>
+        </div>
+        <button class="submit design_btn  "  onclick="displayProtein()">Calculate</button>
+        <div class="group result"></div>
+      </div>
+    </section>
+    <section class="info">
+      <h4>What are proteins? – protein definition</h4>
+      <p>
+        Proteins, just like carbohydrates and fats, are macronutrients – substances used by organisms to produce energy and sustain basic bodily functions. Being organisms, proteins are essential to our existence. Different types of proteins build our muscles and regulate our hormones and metabolism. Some of them are globulins called antibodies – without proteins, our immune system wouldn't work.
+      </p>
+      <h4>How much protein do I need? – recommended protein intake</h4>
+      <p>
+        While many bodybuilders follow the "the more, the merrier" rule when planning their protein intake, the truth is that our bodies cannot utilize a lot of protein at once. If you eat an enormous steak, your cells will only use a fraction of it. Our bodies will convert the rest to carbohydrates for energy. <br> <br>
+
+Now, how much protein per day should you eat? There are many different approaches to estimating how much protein per day should be supplied to our bodies. According to USDA Dietary Guideline, we should keep the percentage of proteins in the total calorie intake at 10-30%. Our protein calculator uses precisely these values. <br> <br>
+
+Other recommendations, such as the one issued by the World Health Organization, set a safe level of protein intake in grams per kilogram of body mass. An adult should consume about 0.83 g of protein per kilogram of body weight per day, and this amount is expected to meet the protein needs of 97.5 percent of the world's healthy adult population. This value can be higher for infants, pregnant women, or athletes. <br><br>
+      </p>
+      <h4>Foods high in protein</h4>
+      <p>
+        You already know how much protein per day you should eat to preserve your well-being, but do you know what you can eat to supply proteins effectively? Do you know any foods high in protein? Don't worry. We have prepared a list of foods high in protein, especially for you: <br>
+
+Meat: beef, pork, lamb, turkey, and chicken breasts <br>
+Fish: tuna, halibut, and salmon <br>
+Eggs <br>
+Dairy products: milk, cottage cheese, and yogurt <br>
+Nuts and seeds: hemp seeds, almonds, pumpkin seeds, pistachios, chia seeds, and nut butter <br>
+Plants and corns: black beans, lima beans, yellow corn, potatoes, broccoli, cauliflower, cabbage, oats, legumes, sun-dried tomatoes, guava, artichokes, peas, chickpeas, quinoa, lentils, avocado, and asparagus <br>
+Spirulina – biomass produced by cyanobacteria – blue-green algae <br>
+Whey protein powder – used as a supplement by heavy lifters and athletes wanting to build muscle mass. In the next paragraph, we will give you a recipe for a banana protein shake!
+      </p>
+    </section>
+    <script src="protein.js"></script>
+  </body>
+</html>

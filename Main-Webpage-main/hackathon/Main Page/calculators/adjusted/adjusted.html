@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="../Main Page/calculators/adjusted/adjusted.css"
+    />
+    <script src="../Main Page/calculators/adjusted/adjusted.js"></script>
+  </head>
+  <body>
+    <section class="everything"></section>
+    <section id="header">
+      <div class="headlogo">
+        <a href="#"><img src="../img/656_R0lVIEpFTiAzMzMtOTU.jpg" alt="" /></a>
+        <a href="#" id="clothify">Medicure</a>
+      </div>
+      <div>
+        <ul id="navbar">
+          <li class="hover-underline-animation">
+            <a href="../Main Page/Main.html">Home</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <div class="cover">
+        <div class="content">
+          <h4 class="calc">Adjusted Body Weight</h4>
+          <form>
+            <div class="group">
+              <label>Sex:-</label>
+              <input type="radio" name="gender" value="male" />Male
+              <input type="radio" name="gender" value="female" />Female
+            </div>
+            <div class="group">
+              <label>Height:-</label>
+              <input type="number" id="h" placeholder="Centimeters" />
+            </div>
+            <div class="group">
+              <label>Actual Body Weight:-</label>
+              <input type="number" id="w" placeholder="Kg" />
+            </div>
+            <div class="flex">
+              <div class="btnn">
+                <button class="btn" onclick="calc()">Calculate</button>
+              </div>
+              <div class="group">
+                <label>AjBW:-</label>
+                <input
+                  type="text"
+                  id="bmi"
+                  placeholder="Your AjBW"
+                  class="bmi"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="info">
+      <h4>What is adjusted body weight?</h4>
+      <p>
+        Adjusted body weight (sometimes abbreviated to AjBW) is a measure used
+        for calculating a person's nutritional needs, popular among dietitians
+        when they are tasked with setting up a weight loss program. It is
+        especially useful when the patient is overweight or obese. As adipose
+        tissue is less metabolically active than lean tissue, using actual body
+        weight for calculating one's energy requirements might result in some
+        overestimations for people above their healthy BMI. Hence, it's often
+        recommended to use AjBW instead.
+      </p>
+      <h4>How to use the adjusted body weight calculator?</h4>
+      <p>
+        To use our calculator, follow these instructions: <br />
+
+        1. Provide the calculator with your sex. <br />
+        2.Input your height. <br />
+        3.Input your actual body weight. <br />
+        4.The adjusted body weight calculator will use your sex, height and
+        weight to figure out your ideal weight, which is a component of the
+        adjusted body weight formula. Please note that there are several
+        accepted equations used for calculating ideal weight, based on slightly
+        different scientific theories. However, the differences in results are
+        practically negligible, so you shouldn't worry about them. You can read
+        more about these theories at our ideal weight calculator. In this
+        calculator, we use the Robinson formula. <br />
+        5.The calculator will use the values you provided to calculate your AjBW
+        and display it to you in the bottom-most field.
+      </p>
+      <h4>Limitations of the adjusted body weight calculator</h4>
+      <p>
+        It's essential to keep in mind that the adjusted body weight calculator
+        is not appropriate in all situations. One should only use it when their
+        excess weight comes from adipose tissue.
+      </p>
+    </section>
+    <script>
+      let p = [];
+      function calc() {
+        event.preventDefault();
+        const h = document.getElementById("h").value;
+        const w = document.getElementById("w").value;
+        const g = document.getElementsByName("gender");
+        // const result = document.getElementById("bmi").value;
+        for (i = 0; i < g.length; i++) {
+          if (g[i].checked) p += g[i].value;
+        }
+        // 50 + (0.91 × [height in centimeters − 152.4])
+        console.log(p);
+        if (p === "male") {
+          let fw = Number(w);
+          console.log(h);
+          const p = h / 30.5;
+          console.log(i);
+          let ibw = 50 + 0.91 * (h - 152.4);
+          console.log(Number(ibw));
+          console.log(w);
+          let ajbw = (ibw + 0.4 * (Number(w) - ibw)).toFixed(2);
+
+          document.getElementById("bmi").value = ajbw;
+        } else if (p === "female") {
+          let fw = Number(w);
+          console.log(h);
+          const p = h / 30.5;
+          console.log(i);
+          let ibw = 50 + 0.91 * (h - 145.5);
+          console.log(Number(ibw));
+          console.log(w);
+          let ajbw = (ibw + 0.4 * (Number(w) - ibw)).toFixed(2);
+
+          document.getElementById("bmi").value = ajbw;
+        } else {
+          alert("Please Select Your Gender");
+        }
+        p = [];
+      }
+    </script>
+  </body>
+</html>

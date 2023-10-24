@@ -4,4 +4,4 @@ steps to run the application
 2. run the cancer file in new vs window 
 3. run braintumor file in new vs window
 
-and then run the main file hackathon
+and then run the main file main-webpage-main
